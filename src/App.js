@@ -4,7 +4,7 @@ import store from './store/store.js'
 import {addTodoItem, removeTodoItem} from './actions/action.js'
 
 
-var HelloWorld = React.createClass({
+var App = React.createClass({
   render: function() {
 
   	//Maps over todo items object. 
@@ -59,7 +59,7 @@ var HelloWorld = React.createClass({
 
 
 const render = () => ReactDOM.render(
-  <HelloWorld />,
+  <App />,
   document.getElementById('root')
 );
 
