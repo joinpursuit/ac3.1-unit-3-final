@@ -6,7 +6,7 @@ const AddItem = (props) => (
 		<div>
 			<div>
 			{Store.getState().shoes.map(function(item, idx) {
-			    return <span key={idx}>{item}</span>
+			    return <li key={idx}>{item}</li>
 			 })}
 
 			{Store.getState().hat.map(function(item, idx) {
