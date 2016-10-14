@@ -6,13 +6,14 @@ You will be assessed on the completeness and correctness of your code as well as
 Be sure to attempt every part of the exam. We will be giving partial credit, but we cannot even give partial credit if you leave things blank.
 
 # Setup
-- Fork the main repo
+- Fork the main repo (https://github.com/C4Q/ac3.1-unit-3-final)
 - Clone your forked repo
 - `npm install`
 - `npm install redux`
+- run `npm start` to start your app
 - You are not required to use 'react-redux'. In other words, you are not required to use 'Provider' and 'connect' (however, you are welcome to use them if you think it would help you).
 
-If you are using Redux without 'react-redux', replace the `ReactDOM.render` function with the following:
+If you are not using 'react-redux', replace the `ReactDOM.render` function with the following:
 
 ```js
 const render = () => ReactDOM.render(
@@ -27,7 +28,7 @@ store.subscribe(render);
 Make sure you either import your store into `App.js` or create your store in `App.js`, because you will need access to it in order to use `store.subscribe`.
 
 # Submission
-Wait until at least 4:55 PM to submit you work (even if you finish earlier). If you finish before 4:55 you are welcome to go in the hallway or in the back and work on your own projects, just wait until at least 4:55 to officially submit.
+Wait until at least 4:20 PM to submit you work (even if you finish earlier). If you finish before 4:20 you are welcome to go in the hallway or in the back and work on your own projects, just wait until at least 4:20 to officially submit. At 4:30 we'll briefly review plans for next week, then you'll be dismissed for the weekend.
 
 To submit your test, make a pull request to the main repo (which your originally forked from) with your completed test.
 
