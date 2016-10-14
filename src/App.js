@@ -1,17 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var HelloWorld = React.createClass({
+import AddItem from './AddItem.js';
+import Store from './Store.js'
+
+var App = React.createClass({
   render: function() {
     return (
       <div>
-        <h1>Hello World!</h1>
+      	<h1>Welcome to my Store</h1>
+      	<h2>ADD AN ITEM</h2>
+      	<h3>LIST ITEM</h3>
+      	<AddItem />
+      	<h2>{Store.getState().shirt}</h2>
       </div>
     )
   }
 })
 
-ReactDOM.render(
-  <HelloWorld />,
+
+
+// ReactDOM.render(
+//   <App />,
+//   document.getElementById('root')
+// );
+const render = () => ReactDOM.render(
+  <App />,
   document.getElementById('root')
 );
+
+render();
+Store.subscribe(render);
