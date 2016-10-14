@@ -49,7 +49,7 @@ var hat = () =>(
 
 var remove = () =>(
 
-	{type:REMOVE, clothes: store.getState().clothes = [] , shirtCounter:store.getState().shirtCounter, jeansCounter:store.getState().jeansCounter, hatCounter: store.getState().hatCounter + 1}	
+	{type:REMOVE, clothes: store.getState().clothes , shirtCounter:store.getState().shirtCounter, jeansCounter:store.getState().jeansCounter, hatCounter: store.getState().hatCounter + 1}	
 
 )
 
