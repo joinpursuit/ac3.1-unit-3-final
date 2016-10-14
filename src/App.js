@@ -1,17 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {createStore} from 'redux';
+import Cart from './components.js';
+import store from './store.js';
 
-var HelloWorld = React.createClass({
+var App = React.createClass({
   render: function() {
     return (
       <div>
-        <h1>Hello World!</h1>
+        <Cart />
       </div>
     )
   }
 })
 
-ReactDOM.render(
-  <HelloWorld />,
+const render = () => ReactDOM.render(
+  <App />,
   document.getElementById('root')
 );
+
+render();
+store.subscribe(render);
