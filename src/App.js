@@ -1,17 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import store from './store/store.js';
+import Counter from './components/counter.js';
 
-var HelloWorld = React.createClass({
+console.log(store.getState(),'this is the state');
+
+
+
+var App = React.createClass({
   render: function() {
     return (
       <div>
-        <h1>Hello World!</h1>
+        <Counter/>
       </div>
     )
   }
 })
 
-ReactDOM.render(
-  <HelloWorld />,
+const render = () => ReactDOM.render(
+  <App />,
   document.getElementById('root')
 );
+
+render();
+store.subscribe(render);
