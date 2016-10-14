@@ -10,15 +10,15 @@ const AddItem = (props) => (
 			 })}
 
 			{Store.getState().hat.map(function(item, idx) {
-			    return <span key={idx}>{item}</span>
+			    return <li key={idx}>{item}</li>
 			 })}
 
 			{Store.getState().sunglasses.map(function(item, idx) {
-			    return <span key={idx}>{item}</span>
+			    return <li key={idx}>{item}</li>
 			 })}
 
 			{Store.getState().shirt.map(function(item, idx) {
-			    return <span key={idx}>{item}</span>
+			    return <li key={idx}>{item}</li>
 			 })}
 
 

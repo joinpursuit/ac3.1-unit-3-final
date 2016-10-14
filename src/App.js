@@ -12,7 +12,6 @@ var App = React.createClass({
       	<h2>ADD AN ITEM</h2>
       	<h3>LIST ITEM</h3>
       	<AddItem />
-      	<h2>{Store.getState().shirt}</h2>
       </div>
     )
   }
