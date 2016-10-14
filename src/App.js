@@ -1,17 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import store from './store/store';
+import Remove from './remove/remove'
+import Counter from './counter/counter';
+import './App.css'
 
-var HelloWorld = React.createClass({
-  render: function() {
-    return (
-      <div>
-        <h1>Hello World!</h1>
-      </div>
-    )
-  }
-})
+var App = (props) => (
+  <div>
+    <h1>Welcome to my Store!</h1>
+    <Counter store={store} />
+    <Remove />
+  </div>
 
-ReactDOM.render(
-  <HelloWorld />,
+)
+
+const render = () => ReactDOM.render(
+  <App />,
   document.getElementById('root')
 );
+
+render();
+store.subscribe(render);
