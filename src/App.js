@@ -1,17 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
 
-var HelloWorld = React.createClass({
-  render: function() {
-    return (
-      <div>
-        <h1>Hello World!</h1>
-      </div>
-    )
-  }
-})
+// IMPORT STORE
+import {store} from './store/store.js';
 
-ReactDOM.render(
-  <HelloWorld />,
-  document.getElementById('root')
-);
+// IMPORT CONTAINERS
+import {ListContainer} from './components/listContainer.js';
+
+// PROVIDER LINKS REACT TO REDUX
+const App = () => (
+  <Provider store={store}>
+    <ListContainer/>
+  </Provider>
+)
+
+document.addEventListener('DOMContentLoaded', () => {
+  ReactDOM.render(
+    <App/>,
+    document.getElementById('root')
+  )
+});
+
