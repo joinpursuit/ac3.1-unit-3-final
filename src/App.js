@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux'
+import { addShirt, addShoes, addHat, addSunglasses } from './actions.js';
+import Items from './components/items.jsx'
+import ItemContainer from './components/item_container'
+import store from './store';
 
-var HelloWorld = React.createClass({
-  render: function() {
-    return (
-      <div>
-        <h1>Hello World!</h1>
-      </div>
-    )
-  }
-})
+const App = () => (
+	<Provider store={store}>
+		<ItemContainer/>
+	</Provider>	
+) 
 
-ReactDOM.render(
-  <HelloWorld />,
-  document.getElementById('root')
-);
+
+document.addEventListener("DOMContentLoaded", () => {
+	ReactDOM.render(
+	<App />,document.getElementById('root'))
+});
