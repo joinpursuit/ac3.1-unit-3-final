@@ -1,17 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import store from './store/store.js';
+import AddItem from './components/AddItem.jsx';
+import RemoveItem from './components/RemoveItem.jsx';
+import ItemCount from './components/ItemCount.jsx';
+import ItemList from './components/ItemList.jsx';
 
-var HelloWorld = React.createClass({
+var App = React.createClass({
   render: function() {
     return (
       <div>
-        <h1>Hello World!</h1>
+        <AddItem store={store} />
+        <RemoveItem store={store} />
+        <ItemCount store={store} />
+        <ItemList store={store} />
       </div>
     )
   }
 })
 
-ReactDOM.render(
-  <HelloWorld />,
+const render = () => ReactDOM.render(
+  <App />,
   document.getElementById('root')
 );
+
+render();
+store.subscribe(render);
