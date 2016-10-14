@@ -6,6 +6,7 @@ var HelloWorld = React.createClass({
     return (
       <div>
         <h1>Hello World!</h1>
+        <h1>Goodbye world</h1>
       </div>
     )
   }
