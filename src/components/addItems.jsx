@@ -1,25 +1,32 @@
 import React from 'react'
 import store from '../store/store'
 
-const ADD_ITEM = 'ADD_ITEM'
-
-const addItem = (item) => (
+const addItem = (items) => (
   {
-    type: ADD_ITEM, 
-    item
+    type: 'ADD_ITEM', 
+    items,
   }
 )
 
-const AddItems = (props) => (
-  <div>
+const AddItems = (props) => {
+  return (<div>
   <h1>Add To Items</h1>
   {
     props.buttonItems.map((buttonItem, i) => (
-      <button onClick={store.dispatch.bind(this, addItem(buttonItem))} key={i} >{buttonItem}</button>
+      <button onClick={store.dispatch.bind(this, addItem(buttonItem))} key={i} >{buttonItem.toUpperCase()}</button>
     ))
   }
-  </div>
-)
+  <ul>
+    {
+      props.items.map((item, i)=>(
+        <li key={i}>{item}</li>
+      ))
+    }
+
+  </ul>
+
+  </div>)
+}
 
 
 export default AddItems

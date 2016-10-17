@@ -5,13 +5,17 @@ import store from './store/store'
 
 
 //middlewares
-import AddItemsContainer from './middlewares/middlewares'
+import AddItemsContainer from './middlewares/addItemsContainer'
+import ItemCountContainer from './middlewares/itemCountContainer'
+
 
 ReactDOM.render(
   <Provider store={store}>
-    <AddItemsContainer/>
+    <div>
+      <AddItemsContainer/>
+      <ItemCountContainer/>
+    </div>
   </Provider>,
   document.getElementById('root')
 );
 
- //<IndexRoute component={}/>
