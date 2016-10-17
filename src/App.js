@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Router, Route, browserHistory} from 'react-router'
+import {Provider} from 'react-redux'
+import store from './store/store'
 
-var HelloWorld = React.createClass({
+var App = React.createClass({
   render: function() {
     return (
       <div>
@@ -12,6 +15,13 @@ var HelloWorld = React.createClass({
 })
 
 ReactDOM.render(
-  <HelloWorld />,
+  <Provider store={store}>
+    <Router history={browserHistory}>
+      <Route path='/' component={App}>
+      </Route>
+    </Router>
+  </Provider>,
   document.getElementById('root')
 );
+
+ //<IndexRoute component={}/>
