@@ -1,3 +1,12 @@
+
+/*all i added to css is dontShowli*/
+.dontShowli{
+  list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+
 .App {
   text-align: center;
 }
